@@ -46,11 +46,44 @@
       color: white;
     }
 
-    p {
+    h3 {
       font-family: "aktiv-grotesk";
       font-size: 1.6em;
       font-weight: 300;
       letter-spacing: 1px;
+      line-height: 1.8em;
+    }
+
+    h4 {
+      font-family: "aktiv-grotesk";
+      font-size: 1.2em;
+      font-weight: 500;
+      letter-spacing: 1px;
+      line-height: 1.8em;
+    }
+
+    h6 {
+      font-family: "aktiv-grotesk";
+      font-size: 0.8em;
+      font-weight: 700;
+      letter-spacing: 1px;
+      line-height: 1.8em;
+    }
+
+    p {
+      font-family: "aktiv-grotesk";
+      font-size: 1em;
+      font-weight: 400;
+      letter-spacing: 1px;
+      line-height: 1.8em;
+    }
+
+    span.italic {
+      font-style: italic;     
+    }
+
+    span.bold {
+      font-weight: 700;
     }
 
     a:hover { 
@@ -61,26 +94,24 @@
       padding: 16% 18%;
     }
 
-    #title-block {
-      line-height: 2.8em;
-    }
-
-    #title-block p span {
-      font-weight: 700;
-    }
-
-    #title-footer p {
-      font-family: "aktiv-grotesk";
-      font-size: 1em;
-      font-weight: 400;
-    }
-
-    #title-social i {
-      font-size: 1.2em;
+    #container.project-list {
+      padding: 10% 18% 18%;
     }
 
     .row {
       margin-bottom: 40px;
+    }
+
+    .header {
+      margin-bottom: 0.4em;
+    }
+
+    .section {
+      margin-bottom: 1em;
+    }
+
+    #title-social i {
+      font-size: 1.2em;
     }
 
     @media (max-width: 767px) {
@@ -100,29 +131,64 @@
 
   <body>
 
-    <div id="container" class="container-fluid">
+    <div id="container" class="container-fluid title-block">
       
       <div class="row">
-        <div id="title-block" class="col-md-12">
-          <p><span>Ian W.S. Stuart.</span> Designer, technologist, urbanist. Former urban planner and environmental student, current mapping enthusiast.</p>
+        <div class="col-md-12">
+          <h3><span class="bold">Ian W.S. Stuart.</span> Designer, technologist, urbanist. Former urban planner and environmental student, current mapping enthusiast. Find out what I've <span class="bold">made</span>, where I'm <span class="bold">going</span>, and the things I'm <span class="bold">learning.</span></h3>
         </div>
       </div>
 
       <div class="row">
-        <div id="title-footer" class="col-md-12">
+        <div class="col-md-12">
           <p>Footer line goes here...</p>
         </div>
       </div>
 
-      <div class="row">
-        <div id="title-social" class="col-md-12">
+      <div id="title-social" class="row">
+        <div class="col-md-12">
           <a href="https://twitter.com/iwsstuart"><i class="fa fa-twitter"></i></a>&nbsp;
           <a href="https://www.linkedin.com/in/ianwstuart"><i class="fa fa-linkedin"></i></a>&nbsp;
           <a href="https://github.com/iwsstuart"><i class="fa fa-github"></i></a>
         </div>
       </div>
-    
-    </div>  
+
+    </div> 
+
+    <div id="container" class="container-fluid project-list">
+
+      <div class="row">
+        <div id="projects" class="col-md-12">
+          <h4 class="header">Projects</h4>
+          <p>NYC Buildings</p>
+          <p>Seep City</p>
+          <p>Other Work</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div id="reading-list" class="col-md-12">
+          <h4 class="header">Reading List</h4>
+          <div class="section">
+            <h6 class="header">NON-FICTION</h6>
+            <p><span class="italic">Open Data Now</span>, Joel Gurin</p>
+            <p><span class="italic">The Responsive City</span>, Stephen Goldsmith + Susan Crawford</p>
+            <p><span class="italic">Data Points</span>, Nathan Yau</p>
+            <p><span class="italic">The Revenge of Geography</span>, Robert D. Kaplan</p>
+          </div>
+          <div class="section">
+            <h6 class="header">FICTION</h6>
+            <p><span class="italic">City on Fire</span>, Garth Risk Hallberg</p>
+          </div>
+          <div class="section">
+            <h6 class="header">OTHER MEDIA / PERIODICALS</h6>
+            <p><span class="italic">City Lab</span></p>
+            <p><span class="italic">Fastco Design</span></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
