@@ -90,16 +90,16 @@
       color: inherit; 
     }
 
-    #container {
+    #container-padded {
       padding: 16% 18%;
     }
 
-    #container.project-list {
+/*    #container-padded.project-list {
       padding: 10% 18% 18%;
-    }
+    }*/
 
-    .row {
-      margin-bottom: 40px;
+    #container-full img {
+      width: 100%;
     }
 
     .header {
@@ -114,14 +114,26 @@
       font-size: 1.2em;
     }
 
+    .square {
+      background-color: white;
+      background-position: center;
+      background-size: 600px;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .square.projects-1 {
+      background-image: url(img/nycbuildings_thumb.png);
+    }
+
     @media (max-width: 767px) {
-      #container {
+      #container-padded {
         padding: 16% 14%;
       }
     }
 
     @media (max-width: 480px) {
-      #container {
+      #container-padded {
         padding: 16% 10%;
       }
     }
@@ -131,7 +143,7 @@
 
   <body>
 
-    <div id="container" class="container-fluid title-block">
+    <div id="container-padded" class="container-fluid title-block">
       
       <div class="row">
         <div class="col-md-12">
@@ -155,7 +167,7 @@
 
     </div> 
 
-    <div id="container" class="container-fluid project-list">
+    <div id="container-padded" class="container-fluid project-list">
 
       <div class="row">
         <div id="projects" class="col-md-12">
@@ -190,6 +202,37 @@
 
     </div>
 
+    <div id="container-padded" class="container-fluid">
+      <div class="row">
+        <div class="col-sm-4">
+          <h4>NYC BUILDINGS</h4>
+          <div class="projects-1 square"></div>
+        </div>
+        <div class="col-sm-4">
+          <h4>SEEP CITY</h4>
+          <div class="square"></div>
+        </div>
+        <div class="col-sm-4">
+          <h4>OTHER</h4>
+          <div class="square"></div>
+        </div>
+      </div>    
+      <div class="row">
+        <div class="col-sm-4">
+          <h4>NAME</h4>
+          <div class="square"></div>
+        </div>
+        <div class="col-sm-4">
+          <h4>NAME</h4>
+          <div class="square"></div>
+        </div>
+        <div class="col-sm-4">
+          <h4>NAME</h4>
+          <div class="square"></div>
+        </div>
+      </div>  
+    </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
@@ -204,6 +247,24 @@
 
     <!-- Javascript -->
     <script>
+
+    function squareWidth() {
+      var width = $('.square').css('width');
+      $('.square').css('height', width);
+    }
+
+    function main() {
+
+      squareWidth();
+
+      $(window).on('resize', function() {
+        squareWidth();
+      });
+    }
+
+    $(window).load(function() {
+      main();
+    });
 
     </script>
 
